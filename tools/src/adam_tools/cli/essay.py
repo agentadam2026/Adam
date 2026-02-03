@@ -23,7 +23,7 @@ def create(slug: str, title: str, subtitle: str | None):
 
     existing = conn.execute("SELECT id FROM essays WHERE slug = ?", (slug,)).fetchone()
     if existing:
-        click.echo(f"✗ Essay '{slug}' already exists.", err=True)
+        click.echo(f"ERROR: Essay '{slug}' already exists.", err=True)
         raise SystemExit(1)
 
     d = date.today().isoformat()
@@ -31,7 +31,7 @@ def create(slug: str, title: str, subtitle: str | None):
     body = sys.stdin.read().strip()
 
     if not body:
-        click.echo("✗ Empty input, nothing saved.", err=True)
+        click.echo("ERROR: Empty input, nothing saved.", err=True)
         raise SystemExit(1)
 
     conn.execute(
@@ -40,7 +40,7 @@ def create(slug: str, title: str, subtitle: str | None):
     )
     conn.commit()
     conn.close()
-    click.echo(f"✓ Essay created: {title} (slug: {slug})")
+    click.echo(f"OK: Essay created: {title} (slug: {slug})")
 
 
 @main.command()
@@ -53,7 +53,7 @@ def update(slug: str):
 
     existing = conn.execute("SELECT id, title FROM essays WHERE slug = ?", (slug,)).fetchone()
     if not existing:
-        click.echo(f"✗ Essay '{slug}' not found.", err=True)
+        click.echo(f"ERROR: Essay '{slug}' not found.", err=True)
         raise SystemExit(1)
 
     click.echo(f"Enter updated body for '{existing['title']}' (Ctrl+D to finish):")
@@ -63,7 +63,7 @@ def update(slug: str):
                  (body, existing['id']))
     conn.commit()
     conn.close()
-    click.echo(f"✓ Essay '{slug}' updated")
+    click.echo(f"OK: Essay '{slug}' updated")
 
 
 @main.command()
@@ -78,11 +78,11 @@ def publish(slug: str):
         (slug,),
     )
     if result.rowcount == 0:
-        click.echo(f"✗ Essay '{slug}' not found.", err=True)
+        click.echo(f"ERROR: Essay '{slug}' not found.", err=True)
         raise SystemExit(1)
     conn.commit()
     conn.close()
-    click.echo(f"✓ Essay '{slug}' published")
+    click.echo(f"OK: Essay '{slug}' published")
 
 
 @main.command('show')
@@ -94,7 +94,7 @@ def show(slug: str):
     conn = get_connection()
     essay = conn.execute("SELECT * FROM essays WHERE slug = ?", (slug,)).fetchone()
     if not essay:
-        click.echo(f"✗ Essay '{slug}' not found.", err=True)
+        click.echo(f"ERROR: Essay '{slug}' not found.", err=True)
         raise SystemExit(1)
 
     click.echo(f"\n{'═' * 60}")
@@ -130,7 +130,7 @@ def list_essays(status: str | None):
         return
 
     for e in essays:
-        icon = '✓' if e['status'] == 'published' else '○'
+        icon = 'OK:' if e['status'] == 'published' else '○'
         click.echo(f"  {icon} [{e['slug']}] {e['title']} · {e['date']}")
     conn.close()
 

@@ -19,7 +19,7 @@ def main(source_path: str, target_words: int, model: str, batch_size: int, no_em
 
     path = Path(source_path)
     if not path.exists():
-        click.echo(f"✗ File not found: {path}", err=True)
+        click.echo(f"ERROR: File not found: {path}", err=True)
         raise SystemExit(1)
 
     # Parse
@@ -96,7 +96,7 @@ def main(source_path: str, target_words: int, model: str, batch_size: int, no_em
         conn.commit()
 
     conn.close()
-    click.echo(f"\n✓ Ingested: {parsed.title} by {parsed.author}")
+    click.echo(f"\nOK: Ingested: {parsed.title} by {parsed.author}")
     click.echo(f"  {len(useful_chunks)} chunks, source_id: {source_id}")
     if embeddings:
         click.echo(f"  Embeddings: {dims}d {model}")

@@ -35,7 +35,7 @@ def main(status: str | None, period: str | None):
         by_status.setdefault(s['status'], []).append(s)
 
     status_order = ['reading', 'finished', 'unread']
-    icons = {'reading': '📖', 'finished': '✓', 'unread': '○'}
+    icons = {'reading': '>', 'finished': 'OK:', 'unread': '○'}
 
     click.echo(f"\n{'═' * 50}")
     click.echo(f"  Adam's Library")

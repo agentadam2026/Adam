@@ -39,10 +39,10 @@ def main():
     click.echo(f"  Adam's Library — Overview")
     click.echo(f"{'═' * 50}")
 
-    click.echo(f"\n  📚 Sources: {total_sources}")
+    click.echo(f"\n  Sources: {total_sources}")
     for status in ['reading', 'finished', 'unread']:
         if status in status_counts:
-            icon = {'reading': '📖', 'finished': '✓', 'unread': '○'}[status]
+            icon = {'reading': '>', 'finished': 'OK:', 'unread': '○'}[status]
             click.echo(f"     {icon} {status}: {status_counts[status]}")
 
     click.echo(f"\n  📄 Chunks: {chunk_count:,}")
@@ -64,7 +64,7 @@ def main():
     if recent:
         click.echo(f"\n  Recent:")
         for r in recent:
-            icon = {'reading': '📖', 'finished': '✓', 'unread': '○'}.get(r['status'], '?')
+            icon = {'reading': '>', 'finished': 'OK:', 'unread': '○'}.get(r['status'], '?')
             click.echo(f"     {icon} {r['author']}, {r['title']}")
 
     click.echo(f"\n{'═' * 50}\n")

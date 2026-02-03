@@ -6,7 +6,7 @@ A structured reading list of the most important works of Western thought, organi
 
 ---
 
-## 📖 First Shelf (Already Selected)
+## First Shelf (Already Selected)
 
 These 10 books form Adam's initial reading — a cross-section spanning the entire canon:
 
@@ -27,7 +27,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 
 ## 1. Ancient Greece (~800 BC – 300 BC)
 
-### ⭐ Essential
+### Essential
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -40,7 +40,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 | The Histories | Herodotus | ~430 BC | History | 2707 |
 | History of the Peloponnesian War | Thucydides | ~411 BC | History | 7142 |
 
-### 📚 Important
+### Important
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -56,7 +56,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 
 ## 2. Ancient Rome & Hellenistic (~300 BC – 500 AD)
 
-### ⭐ Essential
+### Essential
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -68,7 +68,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 | Metamorphoses | Ovid | 8 AD | Mythological Poetry | 21765 |
 | Lives of the Noble Greeks and Romans | Plutarch | ~100 AD | Biography | 674 |
 
-### 📚 Important
+### Important
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -80,7 +80,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 
 ## 3. Medieval (~500 – 1400)
 
-### ⭐ Essential
+### Essential
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -90,7 +90,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 | Summa Theologica (Part I) | Thomas Aquinas | ~1270 | Theology/Philosophy | 17611 |
 | The Decameron | Giovanni Boccaccio | ~1353 | Prose Fiction | 3726 |
 
-### 📚 Important
+### Important
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -101,7 +101,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 
 ## 4. Renaissance & Reformation (~1400 – 1600)
 
-### ⭐ Essential
+### Essential
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -112,7 +112,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 | The Praise of Folly | Desiderius Erasmus | 1511 | Satire | 9371 |
 | The Complete Works of William Shakespeare | William Shakespeare | ~1590–1613 | Drama/Poetry | 100 |
 
-### 📚 Important
+### Important
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -123,7 +123,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 
 ## 5. Early Modern / Enlightenment (~1600 – 1800)
 
-### ⭐ Essential
+### Essential
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -137,7 +137,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 | The Wealth of Nations | Adam Smith | 1776 | Economics | 3300 |
 | Candide | Voltaire | 1759 | Satirical Novel | 19942 |
 
-### 📚 Important
+### Important
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -155,7 +155,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 
 ## 6. 19th Century (~1800 – 1900)
 
-### ⭐ Essential
+### Essential
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -169,7 +169,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 | Moby-Dick | Herman Melville | 1851 | Novel | 2489 |
 | Les Misérables | Victor Hugo | 1862 | Novel | 135 |
 
-### 📚 Important
+### Important
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -194,7 +194,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 
 ## 7. Early 20th Century (~1900 – 1928) — Public Domain Cutoff
 
-### ⭐ Essential
+### Essential
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -205,7 +205,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 | Tractatus Logico-Philosophicus | Ludwig Wittgenstein | 1921 | Philosophy | 5740 |
 | The Souls of Black Folk | W.E.B. Du Bois | 1903 | Essays | 408 |
 
-### 📚 Important
+### Important
 
 | Title | Author | ~Year | Genre | PG ID |
 |-------|--------|-------|-------|-------|
@@ -218,7 +218,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 
 ---
 
-## 📊 Summary
+## Summary
 
 | Period | Essential | Important | Total |
 |--------|-----------|-----------|-------|
@@ -233,7 +233,7 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 
 ---
 
-## 🔑 Key
+## Key
 
 - PG ID = Project Gutenberg eBook number (access at `https://www.gutenberg.org/ebooks/{ID}`)
 - All IDs verified against gutenberg.org as of February 2026

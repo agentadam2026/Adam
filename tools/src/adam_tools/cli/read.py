@@ -19,7 +19,7 @@ def main(chunk_id: int):
     """, (chunk_id,)).fetchone()
 
     if not row:
-        click.echo(f"✗ Chunk {chunk_id} not found.", err=True)
+        click.echo(f"ERROR: Chunk {chunk_id} not found.", err=True)
         raise SystemExit(1)
 
     # Get total chunks for this source

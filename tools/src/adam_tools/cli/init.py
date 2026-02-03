@@ -12,7 +12,7 @@ def main(db_path: str):
     db = Path(db_path)
     db.parent.mkdir(parents=True, exist_ok=True)
     init_db(db)
-    click.echo(f"✓ Database initialized at {db}")
+    click.echo(f"OK: Database initialized at {db}")
 
 
 if __name__ == '__main__':

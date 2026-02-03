@@ -13,7 +13,7 @@ def main(url: str | None, token: str | None):
     or pass --url and --token.
     """
     if not url or not token:
-        click.echo("✗ Turso credentials not configured.", err=True)
+        click.echo("ERROR: Turso credentials not configured.", err=True)
         click.echo("  Set TURSO_DATABASE_URL and TURSO_AUTH_TOKEN env vars,", err=True)
         click.echo("  or pass --url and --token.", err=True)
         raise SystemExit(1)

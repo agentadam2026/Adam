@@ -34,7 +34,7 @@ def main(text: str, trail: str | None, essay: str | None):
     )
     conn.commit()
     conn.close()
-    click.echo(f"✓ Tweet draft saved")
+    click.echo(f"OK: Tweet draft saved")
 
 
 if __name__ == '__main__':

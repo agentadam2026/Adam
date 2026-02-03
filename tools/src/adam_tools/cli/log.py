@@ -19,7 +19,7 @@ def main(log_date: str | None, append: bool):
     body = sys.stdin.read().strip()
 
     if not body:
-        click.echo("✗ Empty input, nothing saved.", err=True)
+        click.echo("ERROR: Empty input, nothing saved.", err=True)
         raise SystemExit(1)
 
     existing = conn.execute("SELECT id, body FROM daily_logs WHERE date = ?", (d,)).fetchone()
@@ -43,7 +43,7 @@ def main(log_date: str | None, append: bool):
 
     conn.commit()
     conn.close()
-    click.echo(f"✓ Log {action} for {d}")
+    click.echo(f"OK: Log {action} for {d}")
 
 
 if __name__ == '__main__':

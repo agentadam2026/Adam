@@ -18,7 +18,7 @@ def main(source_slug: str, append: bool):
     source = conn.execute("SELECT id, title, author FROM sources WHERE slug = ?",
                           (source_slug,)).fetchone()
     if not source:
-        click.echo(f"✗ Source '{source_slug}' not found.", err=True)
+        click.echo(f"ERROR: Source '{source_slug}' not found.", err=True)
         # Show available sources
         sources = conn.execute("SELECT slug, title FROM sources ORDER BY slug").fetchall()
         if sources:
@@ -33,7 +33,7 @@ def main(source_slug: str, append: bool):
     body = sys.stdin.read().strip()
 
     if not body:
-        click.echo("✗ Empty input, nothing saved.", err=True)
+        click.echo("ERROR: Empty input, nothing saved.", err=True)
         raise SystemExit(1)
 
     # Check for existing note for this source
@@ -58,7 +58,7 @@ def main(source_slug: str, append: bool):
 
     conn.commit()
     conn.close()
-    click.echo(f"✓ Reading note {action} for {source['title']}")
+    click.echo(f"OK: Reading note {action} for {source['title']}")
 
 
 if __name__ == '__main__':

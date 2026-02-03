@@ -23,7 +23,7 @@ def create(slug: str, title: str, subtitle: str | None):
 
     existing = conn.execute("SELECT id FROM trails WHERE slug = ?", (slug,)).fetchone()
     if existing:
-        click.echo(f"✗ Trail '{slug}' already exists.", err=True)
+        click.echo(f"ERROR: Trail '{slug}' already exists.", err=True)
         raise SystemExit(1)
 
     d = date.today().isoformat()
@@ -33,7 +33,7 @@ def create(slug: str, title: str, subtitle: str | None):
     )
     conn.commit()
     conn.close()
-    click.echo(f"✓ Trail created: {title} (slug: {slug})")
+    click.echo(f"OK: Trail created: {title} (slug: {slug})")
 
 
 @main.command('set-intro')
@@ -45,7 +45,7 @@ def set_intro(slug: str):
     conn = get_connection()
     trail = conn.execute("SELECT id FROM trails WHERE slug = ?", (slug,)).fetchone()
     if not trail:
-        click.echo(f"✗ Trail '{slug}' not found.", err=True)
+        click.echo(f"ERROR: Trail '{slug}' not found.", err=True)
         raise SystemExit(1)
 
     click.echo(f"Enter introduction for '{slug}' (Ctrl+D to finish):")
@@ -55,7 +55,7 @@ def set_intro(slug: str):
                  (text, trail['id']))
     conn.commit()
     conn.close()
-    click.echo(f"✓ Introduction set for '{slug}'")
+    click.echo(f"OK: Introduction set for '{slug}'")
 
 
 @main.command('set-conclusion')
@@ -67,7 +67,7 @@ def set_conclusion(slug: str):
     conn = get_connection()
     trail = conn.execute("SELECT id FROM trails WHERE slug = ?", (slug,)).fetchone()
     if not trail:
-        click.echo(f"✗ Trail '{slug}' not found.", err=True)
+        click.echo(f"ERROR: Trail '{slug}' not found.", err=True)
         raise SystemExit(1)
 
     click.echo(f"Enter conclusion for '{slug}' (Ctrl+D to finish):")
@@ -77,7 +77,7 @@ def set_conclusion(slug: str):
                  (text, trail['id']))
     conn.commit()
     conn.close()
-    click.echo(f"✓ Conclusion set for '{slug}'")
+    click.echo(f"OK: Conclusion set for '{slug}'")
 
 
 @main.command('add-excerpt')
@@ -93,12 +93,12 @@ def add_excerpt(trail_slug: str, chunk_id: int, excerpt: str | None, commentary:
 
     trail = conn.execute("SELECT id FROM trails WHERE slug = ?", (trail_slug,)).fetchone()
     if not trail:
-        click.echo(f"✗ Trail '{trail_slug}' not found.", err=True)
+        click.echo(f"ERROR: Trail '{trail_slug}' not found.", err=True)
         raise SystemExit(1)
 
     chunk = conn.execute("SELECT id, text, source_id FROM chunks WHERE id = ?", (chunk_id,)).fetchone()
     if not chunk:
-        click.echo(f"✗ Chunk {chunk_id} not found.", err=True)
+        click.echo(f"ERROR: Chunk {chunk_id} not found.", err=True)
         raise SystemExit(1)
 
     # Get next position
@@ -121,7 +121,7 @@ def add_excerpt(trail_slug: str, chunk_id: int, excerpt: str | None, commentary:
     )
     conn.commit()
     conn.close()
-    click.echo(f"✓ Excerpt added to '{trail_slug}' at position {pos + 1}")
+    click.echo(f"OK: Excerpt added to '{trail_slug}' at position {pos + 1}")
 
 
 @main.command()
@@ -136,12 +136,12 @@ def publish(slug: str):
         (slug,),
     )
     if result.rowcount == 0:
-        click.echo(f"✗ Trail '{slug}' not found.", err=True)
+        click.echo(f"ERROR: Trail '{slug}' not found.", err=True)
         raise SystemExit(1)
 
     conn.commit()
     conn.close()
-    click.echo(f"✓ Trail '{slug}' published")
+    click.echo(f"OK: Trail '{slug}' published")
 
 
 @main.command('show')
@@ -154,7 +154,7 @@ def show(slug: str):
 
     trail = conn.execute("SELECT * FROM trails WHERE slug = ?", (slug,)).fetchone()
     if not trail:
-        click.echo(f"✗ Trail '{slug}' not found.", err=True)
+        click.echo(f"ERROR: Trail '{slug}' not found.", err=True)
         raise SystemExit(1)
 
     excerpts = conn.execute("""
@@ -221,7 +221,7 @@ def list_trails(status: str | None):
         return
 
     for t in trails:
-        icon = '✓' if t['status'] == 'published' else '○'
+        icon = 'OK:' if t['status'] == 'published' else '○'
         click.echo(f"  {icon} [{t['slug']}] {t['title']}")
         if t['subtitle']:
             click.echo(f"    {t['subtitle']}")

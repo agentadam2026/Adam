@@ -33,7 +33,7 @@ def main(gutenberg_id: int, library_dir: str):
         resp = httpx.get(url, follow_redirects=True, timeout=30)
         resp.raise_for_status()
     except httpx.HTTPError as e:
-        click.echo(f"✗ Failed to fetch: {e}", err=True)
+        click.echo(f"ERROR: Failed to fetch: {e}", err=True)
         raise SystemExit(1)
 
     text = resp.text
@@ -54,7 +54,7 @@ def main(gutenberg_id: int, library_dir: str):
     filename = f"{slug}.txt"
     file_path = lib_dir / filename
     file_path.write_text(text, encoding='utf-8')
-    click.echo(f"✓ Saved to {file_path}")
+    click.echo(f"OK: Saved to {file_path}")
 
     # Register in database
     conn = get_connection()
@@ -66,7 +66,7 @@ def main(gutenberg_id: int, library_dir: str):
     conn.commit()
     conn.close()
 
-    click.echo(f"✓ Registered: {title} by {author} (slug: {slug})")
+    click.echo(f"OK: Registered: {title} by {author} (slug: {slug})")
 
 
 if __name__ == '__main__':
