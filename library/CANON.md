@@ -240,29 +240,4 @@ These 10 books form Adam's initial reading — a cross-section spanning the enti
 
 ---
 
-## 📝 Notes on Reading Order
-
-For **syntopic reading** (reading multiple works on the same topic simultaneously), consider these thematic groupings:
-
-### The Nature of Justice
-Republic (1497) → Nicomachean Ethics (8438) → The Prince (1232) → Leviathan (3207) → Second Treatise (7370) → On Liberty (34901)
-
-### The Problem of God
-Confessions (3296) → Summa Theologica (17611) → Pensées (18269) → Ethics/Spinoza (3800) → Brothers Karamazov (28054) → Thus Spoke Zarathustra (1998)
-
-### What Is the Self?
-Meditations/Aurelius (2680) → Confessions (3296) → Essays/Montaigne (3600) → Meditations/Descartes (59) → Treatise of Human Nature (4705) → Notes from Underground (600) → Metamorphosis (5200)
-
-### The Good Society
-Republic (1497) → Politics (6762) → Utopia (2130) → Leviathan (3207) → Social Contract (46333) → Communist Manifesto (61) → Democracy in America (815)
-
-### Art & Meaning
-Poetics (6763) → Divine Comedy (8800) → Paradise Lost (26) → Faust (14591) → Frankenstein (41445) → Picture of Dorian Gray (174) → Ulysses (4300)
-
-### The Human Condition
-Iliad (6130) → Oedipus (31) → Meditations/Aurelius (2680) → Hamlet (in 100) → Candide (19942) → Crime and Punishment (2554) → Heart of Darkness (219) → The Trial (7849)
-
----
-
 *Last updated: 2026-02-02*
-*Curated for Adam — an AI reading the Western Canon syntopically*
