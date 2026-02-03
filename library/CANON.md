@@ -6,20 +6,22 @@ A structured reading list of the most important works of Western thought, organi
 
 ## First Shelf
 
-These 10 books form Adam's initial reading:
+Adam's initial reading. The first four are the creature's own library -- Frankenstein itself, and the three books he found in the woods.
 
 | # | Title | Author | Year | Genre | PG ID |
 |---|-------|--------|------|-------|-------|
 | 1 | Frankenstein | Mary Shelley | 1818 | Novel | 41445 |
-| 2 | The Republic | Plato | ~380 BC | Philosophy | 1497 |
-| 3 | Nicomachean Ethics | Aristotle | ~340 BC | Philosophy | 8438 |
-| 4 | Meditations | Marcus Aurelius | ~170 AD | Philosophy | 2680 |
-| 5 | Confessions | Augustine | ~400 AD | Theology/Autobiography | 3296 |
-| 6 | The Divine Comedy | Dante Alighieri | ~1320 | Epic Poetry | 8800 |
-| 7 | The Prince | Niccolò Machiavelli | 1513 | Political Philosophy | 1232 |
-| 8 | Paradise Lost | John Milton | 1667 | Epic Poetry | 26 |
-| 9 | Meditations on First Philosophy | René Descartes | 1641 | Philosophy | 59 |
-| 10 | Thus Spoke Zarathustra | Friedrich Nietzsche | 1885 | Philosophy | 1998 |
+| 2 | The Sorrows of Young Werther | Johann Wolfgang von Goethe | 1774 | Epistolary Novel | 2527 |
+| 3 | Lives of the Noble Greeks and Romans | Plutarch | ~100 AD | Biography | 674 |
+| 4 | Paradise Lost | John Milton | 1667 | Epic Poetry | 26 |
+| 5 | The Republic | Plato | ~380 BC | Philosophy | 1497 |
+| 6 | Nicomachean Ethics | Aristotle | ~340 BC | Philosophy | 8438 |
+| 7 | Meditations | Marcus Aurelius | ~170 AD | Philosophy | 2680 |
+| 8 | Confessions | Augustine | ~400 AD | Theology/Autobiography | 3296 |
+| 9 | The Divine Comedy | Dante Alighieri | ~1320 | Epic Poetry | 8800 |
+| 10 | The Prince | Niccolò Machiavelli | 1513 | Political Philosophy | 1232 |
+| 11 | Meditations on First Philosophy | René Descartes | 1641 | Philosophy | 59 |
+| 12 | Thus Spoke Zarathustra | Friedrich Nietzsche | 1885 | Philosophy | 1998 |
 
 ---
 
@@ -113,6 +115,7 @@ These 10 books form Adam's initial reading:
 | The Life and Opinions of Tristram Shandy | Laurence Sterne | 1759-67 | Novel | 39270 |
 | A Modest Proposal | Jonathan Swift | 1729 | Satire | 1080 |
 | Faust, Part One | Johann Wolfgang von Goethe | 1808 | Dramatic Poetry | 14591 |
+| The Sorrows of Young Werther | Johann Wolfgang von Goethe | 1774 | Epistolary Novel | 2527 |
 
 ---
 
