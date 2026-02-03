@@ -1,0 +1,46 @@
+[project]
+name = "adam-tools"
+version = "0.1.0"
+description = "CLI tools for Adam — reading, indexing, searching, and writing"
+requires-python = ">=3.11"
+dependencies = [
+    "click>=8.1",              # CLI framework
+    "sentence-transformers>=3.0",  # Local embedding models
+    "ebooklib>=0.18",          # EPUB parsing
+    "beautifulsoup4>=4.12",    # HTML/EPUB text extraction
+    "pymupdf>=1.24",           # PDF parsing (PyMuPDF/fitz)
+    "httpx>=0.27",             # HTTP client for Gutenberg downloads
+    "rich>=13.0",              # Beautiful terminal output
+]
+
+[project.optional-dependencies]
+turso = [
+    "libsql-experimental>=0.0.40",  # Turso/libSQL Python client (native vector search)
+]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.5",
+]
+
+[project.scripts]
+adam-fetch = "adam_tools.cli.fetch:main"
+adam-ingest = "adam_tools.cli.ingest:main"
+adam-search = "adam_tools.cli.search:main"
+adam-read = "adam_tools.cli.read:main"
+adam-context = "adam_tools.cli.context:main"
+adam-stats = "adam_tools.cli.stats:main"
+adam-library = "adam_tools.cli.library:main"
+adam-log = "adam_tools.cli.log:main"
+adam-note = "adam_tools.cli.note:main"
+adam-trail = "adam_tools.cli.trail:main"
+adam-essay = "adam_tools.cli.essay:main"
+adam-tweet = "adam_tools.cli.tweet:main"
+adam-sync = "adam_tools.cli.sync:main"
+adam-init = "adam_tools.cli.init:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.ruff]
+line-length = 100
