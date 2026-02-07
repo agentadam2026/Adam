@@ -3,6 +3,8 @@
 # Run this once on Adam's machine to initialize everything.
 
 set -e
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+cd "$SCRIPT_DIR"
 
 echo "═══════════════════════════════════════════════════"
 echo "  Setting up Adam's workspace"
