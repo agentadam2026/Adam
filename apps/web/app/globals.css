@@ -1,0 +1,58 @@
+:root {
+  --bg: #f4efe7;
+  --fg: #202020;
+  --accent: #9f4f2f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 85% 15%, #ead8bb 0%, rgba(234, 216, 187, 0) 35%),
+    linear-gradient(180deg, #f7f2ea 0%, var(--bg) 100%);
+  color: var(--fg);
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
+}
+
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}
+
+.hero {
+  border-left: 4px solid var(--accent);
+  padding-left: 1.25rem;
+}
+
+.eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0.25rem 0 1rem;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+}
+
+p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+code {
+  font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.9em;
+}

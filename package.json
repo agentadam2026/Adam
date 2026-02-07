@@ -1,0 +1,12 @@
+{
+  "name": "adam-monorepo",
+  "private": true,
+  "packageManager": "pnpm@10.0.0",
+  "scripts": {
+    "dev:web": "pnpm --filter adam-web dev",
+    "build:web": "pnpm --filter adam-web build",
+    "start:web": "pnpm --filter adam-web start",
+    "lint:web": "pnpm --filter adam-web lint",
+    "setup:adam": "bash packages/adam-agent/setup.sh"
+  }
+}

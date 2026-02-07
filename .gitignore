@@ -2,10 +2,15 @@
 db/*.db
 db/*.db-wal
 db/*.db-shm
+packages/adam-agent/db/*.db
+packages/adam-agent/db/*.db-wal
+packages/adam-agent/db/*.db-shm
 
 # Library texts (large, downloaded per-machine)
 library/gutenberg/
 library/other/
+packages/adam-agent/library/gutenberg/
+packages/adam-agent/library/other/
 
 # Python
 __pycache__/
@@ -24,6 +29,11 @@ models/
 # OS
 .DS_Store
 Thumbs.db
+
+# Node
+node_modules/
+apps/web/.next/
+apps/web/out/
 
 # OpenClaw
 openclaw.json
