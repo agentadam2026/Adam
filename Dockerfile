@@ -39,8 +39,12 @@ COPY --chown=adam:adam packages/adam-agent/tools /home/adam/tools
 WORKDIR /home/adam/tools
 RUN pip install --no-cache-dir -e .
 
-# Copy OpenClaw config (uses OpenAI by default)
-COPY --chown=adam:adam packages/adam-agent/openclaw.json /home/adam/.openclaw/openclaw.json
+# Copy default OpenClaw config (will be copied to .openclaw/ by entrypoint if needed)
+COPY --chown=adam:adam packages/adam-agent/openclaw.json /home/adam/default-openclaw.json
+
+# Copy entrypoint script
+COPY --chown=adam:adam docker-entrypoint.sh /home/adam/docker-entrypoint.sh
+RUN chmod +x /home/adam/docker-entrypoint.sh
 
 # Copy agent configuration files
 COPY --chown=adam:adam packages/adam-agent/AGENTS.md /home/adam/.openclaw/workspace/AGENTS.md
@@ -77,6 +81,9 @@ EXPOSE 18789
 # Health check
 HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
     CMD curl -f http://localhost:18789/health || exit 1
+
+# Entrypoint ensures config exists
+ENTRYPOINT ["/home/adam/docker-entrypoint.sh"]
 
 # Default command - start OpenClaw gateway
 CMD ["openclaw", "gateway"]
