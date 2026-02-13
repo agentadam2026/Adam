@@ -35,8 +35,8 @@ node_modules/
 apps/web/.next/
 apps/web/out/
 
-# OpenClaw
-openclaw.json
+# OpenClaw (runtime files, not the template config)
+# openclaw.json — keep the template in packages/adam-agent/
 credentials/
 sessions/
 browser/
