@@ -32,13 +32,13 @@ if [ ! -f .env ]; then
 # Adam Environment Variables
 # Add your API keys here
 
-# Anthropic (recommended for Adam)
-ANTHROPIC_API_KEY=
-
-# OpenAI (optional)
+# OpenAI (required - Adam uses gpt-4o by default)
 OPENAI_API_KEY=
+
+# Anthropic (optional, for switching models later)
+ANTHROPIC_API_KEY=
 EOF
-    echo "✓ Created .env file - add your API keys before starting"
+    echo "✓ Created .env file - add your OPENAI_API_KEY before starting"
 fi
 
 # Build the image
@@ -76,7 +76,7 @@ echo
 echo "  Next steps:"
 echo
 echo "  1. Add your API key to .env:"
-echo "     ANTHROPIC_API_KEY=sk-ant-..."
+echo "     OPENAI_API_KEY=sk-..."
 echo
 echo "  2. Start Adam:"
 echo "     docker compose up -d"

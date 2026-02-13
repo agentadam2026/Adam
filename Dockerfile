@@ -39,6 +39,9 @@ COPY --chown=adam:adam packages/adam-agent/tools /home/adam/tools
 WORKDIR /home/adam/tools
 RUN pip install --no-cache-dir -e .
 
+# Copy OpenClaw config (uses OpenAI by default)
+COPY --chown=adam:adam packages/adam-agent/openclaw.json /home/adam/.openclaw/openclaw.json
+
 # Copy agent configuration files
 COPY --chown=adam:adam packages/adam-agent/AGENTS.md /home/adam/.openclaw/workspace/AGENTS.md
 COPY --chown=adam:adam packages/adam-agent/SOUL.md /home/adam/.openclaw/workspace/SOUL.md

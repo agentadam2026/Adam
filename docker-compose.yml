@@ -42,8 +42,8 @@ services:
       - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
       - OPENAI_API_KEY=${OPENAI_API_KEY:-}
     
-    # Override default command to allow unconfigured start
-    command: ["openclaw", "gateway", "--allow-unconfigured"]
+    # Start gateway (config is baked into image)
+    command: ["openclaw", "gateway"]
     
     # Resource limits
     deploy:
