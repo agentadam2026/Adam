@@ -140,6 +140,37 @@ CREATE TABLE IF NOT EXISTS reading_notes (
 CREATE INDEX IF NOT EXISTS idx_reading_notes_source ON reading_notes(source_id);
 CREATE INDEX IF NOT EXISTS idx_reading_notes_date ON reading_notes(date);
 
+-- Chunk thoughts: Adam's annotations on specific passages as he reads
+-- These capture his thinking process, reactions, and connections in real-time
+CREATE TABLE IF NOT EXISTS chunk_thoughts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    chunk_id INTEGER NOT NULL REFERENCES chunks(id) ON DELETE CASCADE,
+    thought_type TEXT NOT NULL,          -- 'reaction', 'question', 'connection', 'insight', 'tension', 'beauty'
+    thought TEXT NOT NULL,               -- Adam's thought/annotation in his voice
+    connections TEXT,                    -- JSON array of related chunk_ids
+    related_topics TEXT,                 -- JSON array of topic labels this connects to
+    intensity INTEGER DEFAULT 1,         -- 1-5, how significant this thought felt
+    created_at TEXT DEFAULT (datetime('now'))
+);
+
+CREATE INDEX IF NOT EXISTS idx_chunk_thoughts_chunk ON chunk_thoughts(chunk_id);
+CREATE INDEX IF NOT EXISTS idx_chunk_thoughts_type ON chunk_thoughts(thought_type);
+CREATE INDEX IF NOT EXISTS idx_chunk_thoughts_date ON chunk_thoughts(created_at);
+
+-- Reading sessions: track when Adam reads, for timeline visualization
+CREATE TABLE IF NOT EXISTS reading_sessions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    source_id INTEGER NOT NULL REFERENCES sources(id),
+    started_at TEXT NOT NULL,
+    ended_at TEXT,
+    chunks_read INTEGER DEFAULT 0,       -- how many chunks processed this session
+    thoughts_recorded INTEGER DEFAULT 0, -- how many chunk_thoughts created
+    notes TEXT                           -- session summary
+);
+
+CREATE INDEX IF NOT EXISTS idx_reading_sessions_source ON reading_sessions(source_id);
+CREATE INDEX IF NOT EXISTS idx_reading_sessions_date ON reading_sessions(started_at);
+
 -- Daily log entries
 CREATE TABLE IF NOT EXISTS daily_logs (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -203,4 +234,11 @@ CREATE TABLE IF NOT EXISTS metadata (
 INSERT OR IGNORE INTO metadata (key, value) VALUES ('embedding_model', '');
 INSERT OR IGNORE INTO metadata (key, value) VALUES ('embedding_dimensions', '');
 INSERT OR IGNORE INTO metadata (key, value) VALUES ('last_sync', '');
-INSERT OR IGNORE INTO metadata (key, value) VALUES ('schema_version', '1');
+INSERT OR IGNORE INTO metadata (key, value) VALUES ('schema_version', '2');
+
+-----------------------------------------------------------
+-- SCHEMA CHANGELOG
+-----------------------------------------------------------
+-- v2 (2026-02-13): Added chunk_thoughts and reading_sessions tables
+--                  for explorable reading / annotation layer
+-- v1 (2026-02-02): Initial schema
