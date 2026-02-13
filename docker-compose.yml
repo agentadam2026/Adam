@@ -38,9 +38,9 @@ services:
     environment:
       - NODE_ENV=production
       - PYTHONUNBUFFERED=1
-      # Model provider API keys (set in .env file)
-      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
-      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      # Optional: API keys if not using Codex OAuth
+      # - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+      # - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
     
     # Start gateway (config is baked into image)
     command: ["openclaw", "gateway"]

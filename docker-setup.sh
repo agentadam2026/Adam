@@ -75,8 +75,13 @@ echo "════════════════════════�
 echo
 echo "  Next steps:"
 echo
-echo "  1. Add your API key to .env:"
-echo "     OPENAI_API_KEY=sk-..."
+echo "  1. Configure Codex OAuth (uses your ChatGPT subscription):"
+echo "     docker compose run --rm adam openclaw setup"
+echo
+echo "     - Select 'OpenAI Codex with ChatGPT OAuth'"
+echo "     - Open the URL it gives you in your browser"
+echo "     - Copy the redirect URL (even if it shows an error)"
+echo "     - Paste it back into the terminal"
 echo
 echo "  2. Start Adam:"
 echo "     docker compose up -d"
