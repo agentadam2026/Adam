@@ -41,3 +41,15 @@ credentials/
 sessions/
 browser/
 media/
+
+# Environment / Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+secrets/
+
+# Docker
+docker-compose.override.yml
+docker-compose.extra.yml
