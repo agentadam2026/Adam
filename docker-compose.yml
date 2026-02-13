@@ -1,0 +1,84 @@
+# Adam - Docker Compose Configuration
+# 
+# Usage:
+#   docker compose up -d          # Start Adam
+#   docker compose down           # Stop Adam
+#   docker compose logs -f        # View logs
+#   docker compose exec adam bash # Shell into container
+
+services:
+  adam:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: adam
+    restart: unless-stopped
+    
+    ports:
+      - "18789:18789"   # OpenClaw gateway / web UI
+    
+    volumes:
+      # Persist OpenClaw config and state
+      - adam-openclaw-config:/home/adam/.openclaw
+      
+      # Persist SQLite database
+      - adam-database:/home/adam/db
+      
+      # Persist downloaded texts
+      - adam-library:/home/adam/library
+      
+      # Persist embedding model cache
+      - adam-models:/home/adam/.cache
+      
+      # Mount agent workspace files from host (for development)
+      # Uncomment to override container files with host files:
+      # - ./packages/adam-agent/SOUL.md:/home/adam/.openclaw/workspace/SOUL.md:ro
+      # - ./packages/adam-agent/AGENTS.md:/home/adam/.openclaw/workspace/AGENTS.md:ro
+    
+    environment:
+      - NODE_ENV=production
+      - PYTHONUNBUFFERED=1
+      # Model provider API keys (set in .env file)
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY:-}
+      - OPENAI_API_KEY=${OPENAI_API_KEY:-}
+    
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          memory: 4G
+        reservations:
+          memory: 1G
+
+  # Optional: CLI container for running adam-tools commands
+  adam-cli:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: adam-cli
+    profiles:
+      - tools  # Only start with: docker compose --profile tools up
+    
+    volumes:
+      - adam-openclaw-config:/home/adam/.openclaw
+      - adam-database:/home/adam/db
+      - adam-library:/home/adam/library
+      - adam-models:/home/adam/.cache
+    
+    environment:
+      - PYTHONUNBUFFERED=1
+    
+    # Override to keep container running for interactive use
+    command: ["sleep", "infinity"]
+    stdin_open: true
+    tty: true
+
+volumes:
+  adam-openclaw-config:
+    name: adam-openclaw-config
+  adam-database:
+    name: adam-database
+  adam-library:
+    name: adam-library
+  adam-models:
+    name: adam-models

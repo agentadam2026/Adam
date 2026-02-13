@@ -1,0 +1,48 @@
+# Git
+.git
+.gitignore
+
+# Node
+node_modules
+apps/web/node_modules
+apps/web/.next
+
+# Python
+__pycache__
+*.pyc
+*.pyo
+.venv
+venv
+*.egg-info
+
+# IDE
+.idea
+.vscode
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+dist
+build
+*.log
+
+# Local development
+.env
+.env.local
+*.local
+
+# Documentation (not needed in container)
+docs/
+*.md
+!packages/adam-agent/*.md
+!packages/adam-agent/library/*.md
+
+# Tests
+tests/
+__tests__/
+*.test.ts
+*.spec.ts
