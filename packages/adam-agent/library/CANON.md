@@ -185,8 +185,87 @@ Adam's initial reading. The first four are the creature's own library -- Franken
 
 ---
 
+## Second Shelf
+
+Additions from Tommy Collison's Great Books list (based on St. John's College curriculum), organized by category. These expand the canon with scientific works, Eastern classics, and additional Western philosophy.
+
+### Scientific & Mathematical Works
+
+| Title | Author | ~Year | Genre | PG ID |
+|-------|--------|-------|-------|-------|
+| Theogony / Works and Days | Hesiod | ~700 BC | Poetry | 348 |
+| Elements | Euclid | ~300 BC | Mathematics | 21076 |
+| On the Revolutions of Heavenly Spheres | Nicolaus Copernicus | 1543 | Astronomy | 37090 |
+| Two New Sciences | Galileo Galilei | 1638 | Physics | 753 |
+| Elements of Chemistry | Antoine Lavoisier | 1789 | Chemistry | 30775 |
+
+### Additional Philosophy
+
+| Title | Author | ~Year | Genre | PG ID |
+|-------|--------|-------|-------|-------|
+| Meno | Plato | ~385 BC | Philosophy | 1643 |
+| Gorgias | Plato | ~380 BC | Philosophy | 1672 |
+| Timaeus | Plato | ~360 BC | Philosophy | 1572 |
+| Proslogium | St. Anselm | ~1078 | Theology | 3405 |
+| Discourses | Epictetus | ~108 AD | Philosophy | 10661 |
+| Monadology | Gottfried Wilhelm Leibniz | 1714 | Philosophy | 39441 |
+| Fear and Trembling | Søren Kierkegaard | 1843 | Philosophy | 52247 |
+
+### French Literature & Drama
+
+| Title | Author | ~Year | Genre | PG ID |
+|-------|--------|-------|-------|-------|
+| Gargantua and Pantagruel | François Rabelais | ~1534 | Satirical Novel | 1200 |
+| The Misanthrope | Molière | 1666 | Comedy | 3743 |
+| Phaedra | Jean Racine | 1677 | Tragedy | 1977 |
+| Maxims | François de La Rochefoucauld | 1665 | Aphorisms | 9105 |
+
+### Additional American Literature
+
+| Title | Author | ~Year | Genre | PG ID |
+|-------|--------|-------|-------|-------|
+| Narrative of the Life of Frederick Douglass | Frederick Douglass | 1845 | Autobiography | 23 |
+| Selected Writings | Booker T. Washington | ~1901 | Essays | 2376 |
+
+### Roman History
+
+| Title | Author | ~Year | Genre | PG ID |
+|-------|--------|-------|-------|-------|
+| The Annals | Tacitus | ~116 AD | History | 852 |
+
+### Eastern Classics (from St. John's Eastern Classics program)
+
+*Note: Many Eastern classics are not on Project Gutenberg or are post-1928 translations. These require sourcing elsewhere.*
+
+| Title | Author/Source | ~Year | Tradition | Notes |
+|-------|---------------|-------|-----------|-------|
+| Analects | Confucius | ~500 BC | Chinese | Sacred Texts Archive |
+| Tao Te Ching | Lao Tzu | ~400 BC | Chinese | PG 216 (James Legge trans.) |
+| The Book of Chuang Tzu | Chuang Tzu | ~300 BC | Chinese | Sacred Texts Archive |
+| Bhagavad Gita | Anonymous | ~200 BC | Hindu | PG 2388 (Edwin Arnold trans.) |
+
+---
+
+## Summary (Updated)
+
+| Period | Works |
+|--------|-------|
+| First Shelf | 12 |
+| Ancient Greece | 15 |
+| Ancient Rome & Hellenistic | 10 |
+| Medieval | 7 |
+| Renaissance & Reformation | 8 |
+| Early Modern / Enlightenment | 18 |
+| 19th Century | 25 |
+| Early 20th Century | 12 |
+| Second Shelf (Tommy Collison additions) | ~20 |
+| **Total** | **~127** |
+
+---
+
 PG ID = Project Gutenberg eBook number (https://www.gutenberg.org/ebooks/{ID})
 
 All IDs verified against gutenberg.org as of February 2026.
 
-*Last updated: 2026-02-02*
+*Last updated: 2026-02-14*
+*Second Shelf added from Tommy Collison's Great Books list (tommycollison.com/greatbooks)*
