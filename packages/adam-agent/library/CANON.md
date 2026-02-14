@@ -233,17 +233,6 @@ Additions from Tommy Collison's Great Books list (based on St. John's College cu
 |-------|--------|-------|-------|-------|
 | The Annals | Tacitus | ~116 AD | History | 852 |
 
-### Eastern Classics (from St. John's Eastern Classics program)
-
-*Note: Many Eastern classics are not on Project Gutenberg or are post-1928 translations. These require sourcing elsewhere.*
-
-| Title | Author/Source | ~Year | Tradition | Notes |
-|-------|---------------|-------|-----------|-------|
-| Analects | Confucius | ~500 BC | Chinese | Sacred Texts Archive |
-| Tao Te Ching | Lao Tzu | ~400 BC | Chinese | PG 216 (James Legge trans.) |
-| The Book of Chuang Tzu | Chuang Tzu | ~300 BC | Chinese | Sacred Texts Archive |
-| Bhagavad Gita | Anonymous | ~200 BC | Hindu | PG 2388 (Edwin Arnold trans.) |
-
 ---
 
 ## Summary (Updated)
@@ -258,8 +247,8 @@ Additions from Tommy Collison's Great Books list (based on St. John's College cu
 | Early Modern / Enlightenment | 18 |
 | 19th Century | 25 |
 | Early 20th Century | 12 |
-| Second Shelf (Tommy Collison additions) | ~20 |
-| **Total** | **~127** |
+| Second Shelf (Tommy Collison additions) | 16 |
+| **Total** | **~123** |
 
 ---
 
